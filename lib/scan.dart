@@ -56,20 +56,7 @@ class _ScanViewState extends State<ScanView> {
         },
       );
     } else {
-      return AndroidView(
-        viewType: 'chavesgu/scan_view',
-        creationParamsCodec: StandardMessageCodec(),
-        creationParams: {
-          "r": widget.scanLineColor.red,
-          "g": widget.scanLineColor.green,
-          "b": widget.scanLineColor.blue,
-          "a": widget.scanLineColor.opacity,
-          "scale": widget.scanAreaScale,
-        },
-        onPlatformViewCreated: (id) {
-          _onPlatformViewCreated(id);
-        },
-      );
+      throw UnsupportedError("Not supported on the current platform!");
     }
   }
 
